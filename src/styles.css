@@ -9,7 +9,7 @@ body {
 }
 .row {
   text-align: center;
-  padding: 10px 0px 20px 0px;
+  padding: 10px 0px 10px 0px;
 }
 .card {
   margin: 80px 0px;
@@ -40,5 +40,5 @@ h3 {
   padding-left: 60px;
 }
 .more {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
