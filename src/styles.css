@@ -9,10 +9,10 @@ body {
 }
 .row {
   text-align: center;
-  padding: 10px 0px 70px 0px;
+  padding: 10px 0px 20px 0px;
 }
 .card {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 p {
   text-align: center;
@@ -38,4 +38,7 @@ h3 {
 .adjust {
   font-size: 12px;
   padding-left: 60px;
+}
+.more {
+  padding-bottom: 50px;
 }
