@@ -1,0 +1,38 @@
+body {
+  background-image: url(images/bg-img.webp);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+}
+.row {
+  text-align: center;
+  padding: 10px 0px 70px 0px;
+}
+.card {
+  margin-top: 100px;
+}
+p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #6c757d;
+}
+.form-outline {
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+}
+.p-2 {
+  color: #e8630a;
+  font-family: "Roboto", sans-serif;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+.text {
+  font-family: "Roboto", sans-serif;
+  color: #6c757d;
+}
+.adjust {
+  font-size: 12px;
+  padding-left: 60px;
+}
