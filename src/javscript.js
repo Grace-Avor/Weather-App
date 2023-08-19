@@ -27,28 +27,27 @@ let button = document.querySelector("#search-form");
 button.addEventListener("click", searchButton);
 
 let now = new Date();
-
 let h2 = document.querySelector("#h2");
 
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let date = now.getDate();
 let day = now.getDay();
-let monthList = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "April",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
+let dayList = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
 ];
-month = monthList[now.getMonth()];
-let year = now.getFullYear();
+day = dayList[now.getDay()];
 
-h2.innerHTML = `${month}, ${date}, ${year} ${hours}:${minutes}`;
+h2.innerHTML = `${day} ${date}, ${hours}:${minutes}`;
