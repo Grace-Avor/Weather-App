@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css" />
     <link
@@ -21,24 +22,26 @@
   <body>
     <div class="container">
       <div class="input-group">
-        <div class="form-outline">
+        <div id="search-form" class="form-outline d-flex">
+          <input id="search-input" type="search" class="form-control" />
+
           <input
-            id="search-input"
-            type="search"
-            class="form-control"
-            placeholder="Search"
+            id="but"
+            type="submit"
+            value="Search"
+            class="button bg-primary"
           />
         </div>
       </div>
       <div class="float-end">
-        <h3 class="text-white">
-          28℃ <br />
-          Nigeria
-        </h3>
+        <h3 class="text-white" id="city">Nigeria</h3>
+        <h4 class="units text-white" id="temp"></h4>
       </div>
       <div class="card d-block">
         <div class="d-flex flex-column">
-          <div class="p-2 fw-bolder">Friday 21, July, 2023</div>
+          <div class="p-2 fw-bolder">
+            <h2 id="h2"></h2>
+          </div>
         </div>
         <div class="container">
           <div class="row">
