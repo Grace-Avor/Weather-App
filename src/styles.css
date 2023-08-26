@@ -21,6 +21,9 @@ ul {
   font-size: 2rem;
   margin-left: -25px;
 }
+.image-div{
+  margin-left: -10px;
+}
 .row {
   text-align: center;
   padding: 10px 0px 10px 0px;
