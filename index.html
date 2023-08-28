@@ -28,6 +28,7 @@
             type="search"
             class="form-control"
             placeholder="Search City"
+            autocomplete="off"
           />
 
           <input
@@ -40,18 +41,21 @@
       </div>
 
       <h1 class="text-white" id="city">Nigeria</h1>
-      <h6 class="text-white" id="description">Broken clouds</h6>
+      <h6 id="h2" class="text-white"></h6>
+      <h6 class="text-white describe" id="description">Broken clouds</h6>
       <div class="row">
         <div class="col-6 xs-6">
           <div class="clearfix image-div">
             <img src="images/icon.png" id="icon" class="float-left" />
 
-            <strong class="units text-white" id="temp"
-              > <span class="degree">20</span> <span id="celcius">ºC/</span> <span id="fel">F</span></strong
+            <strong class="units text-white">
+              <span id="temp" class="degree">20</span>
+              <a href="" id="cels" class="active">ºC</a>
+              <!--<a href="" id="fahrenheit">ºF</a>--></strong
             >
           </div>
         </div>
-        <div class="col-6 xs-6" >
+        <div class="col-6 xs-6">
           <ul class="text-white">
             <li>Humidity: <span id="humidity">50% </span></li>
             <li>Wind: <span id="wind">8</span>km/h</li>
@@ -59,52 +63,14 @@
         </div>
       </div>
       <div class="card d-block">
-        <div class="d-flex flex-column">
-          <div class="p-2 fw-bolder">
-            <h2 id="h2"></h2>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-2 col-md-4 col-6">
-              <h5 class="text">Sun</h5>
-              <p>🌧</p>
-              <p><strong>20℃</strong></p>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6">
-              <h5 class="text">Mon</h5>
-              <p>🌧</p>
-              <p><strong>22℃</strong></p>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6">
-              <h5 class="text">Tue</h5>
-              <p>☁</p>
-              <p><strong>22℃</strong></p>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6">
-              <h5 class="text">Wed</h5>
-              <p>☀</p>
-              <p><strong>24℃</strong></p>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6">
-              <h5 class="text">Thu</h5>
-              <p>⛅</p>
-              <p><strong>23℃</strong></p>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6">
-              <h5 class="text">Fri</h5>
-              <p>⛅</p>
-              <p><strong>22℃</strong></p>
-            </div>
-          </div>
-        </div>
+        <div class="weather-forecast text" id="weather-forecasts"></div>
         <hr />
         <div class="more">
           <a
             href="https://github.com/Grace-Avor/Weather-App"
             class="text adjust text-decoration-none"
           >
-            Source Code
+            Open Source Code
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
