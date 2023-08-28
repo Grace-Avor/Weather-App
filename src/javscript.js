@@ -81,6 +81,7 @@ changeDegrees.addEventListener("click", changeDegree);
 let celsiusDegreeEvent = document.querySelector("#cels");
 celsiusDegreeEvent.addEventListener("click", celsiusDegree);
 
+
 let now = new Date();
 let minutes = now.getMinutes();
 if (minutes < 10) {
@@ -101,5 +102,5 @@ let dayList = [
   "Saturday",
 ];
 day = dayList[now.getDay()];
-let h2 = document.querySelector("#h2");
+let h2 = document.querySelector("#date");
 h2.innerHTML = `${day} ${hours}:${minutes}`;
