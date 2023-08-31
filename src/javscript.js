@@ -44,7 +44,9 @@ function weatherForecasts(response) {
             <div class="forecast-days">${formattedDate(forecastDays.dt)}</div>
               <img src="https://openweathermap.org/img/wn/${
                 forecastDays.weather[0].icon
-              }@2x.png" alt="https://openweathermap.org/img/wn/${forecastDays.weather[0].description}" class="img" />
+              }@2x.png" alt="https://openweathermap.org/img/wn/${
+          forecastDays.weather[0].description
+        }" class="img" />
               <div class="forecast-temp">
                 <span class="forecast-temp-max">${Math.round(
                   forecastDays.temp.max
@@ -112,7 +114,7 @@ function changeDegree(event) {
   event.preventDefault();
   let myTemp = document.querySelector("#temp");
   let fahrenheit = (celsius * 9) / 5 + 32;
-  myTemp.innerHTML = `${fahrenheit}`;
+  myTemp.innerHTML = Math.round(fahrenheit);
 }
 
 function celsiusDegree(event) {
@@ -122,6 +124,22 @@ function celsiusDegree(event) {
   let myTemp = document.querySelector("#temp");
   myTemp.innerHTML = `${celsius}`;
 }
+
+function display(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "ff69729f5d84be9471536bc122ea91ad";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=meric`;
+  axios.get(url).then(weather);
+}
+
+function displayCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(display);
+}
+
+let currentLocation = document.querySelector(".btn-success");
+currentLocation.addEventListener("click", displayCurrentLocation);
 
 let celsius = null;
 
@@ -133,5 +151,3 @@ changeDegrees.addEventListener("click", changeDegree);
 
 let celsiusDegreeEvent = document.querySelector("#cels");
 celsiusDegreeEvent.addEventListener("click", celsiusDegree);
-
-//weatherForecasts();

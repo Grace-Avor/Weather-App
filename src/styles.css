@@ -2,7 +2,12 @@
   font-family: "Roboto", sans-serif;
 }
 body {
-  background: linear-gradient(111.1deg, rgb(0, 40, 70) -4.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123) 97.2%);
+  background: linear-gradient(
+    111.1deg,
+    rgb(0, 40, 70) -4.8%,
+    rgb(255, 115, 115) 82.7%,
+    rgb(255, 175, 123) 97.2%
+  );
   height: 100%;
   background-size: cover;
 }
@@ -20,7 +25,7 @@ ul {
 }
 
 .img {
-  width: 45%;
+  width: 75%;
 }
 .weather-forecast {
   text-align: center;
@@ -30,7 +35,7 @@ ul {
   border: none;
   border-radius: 5px;
   background-color: #1d314c;
-   color: #fff;
+  color: #fff;
 }
 .degree {
   font-size: 3rem;
@@ -55,13 +60,17 @@ ul {
   padding: 70px 0;
   margin: 0 auto;
 }
-.form-outline {
+
+.form-outline,
+.current-location, .submit-button {
   display: block;
   margin: 0 auto;
   padding: 30px;
 }
+
 .text {
   color: #6c757d;
+  font-weight: bold;
 }
 .source-code-url {
   font-size: 12px;
