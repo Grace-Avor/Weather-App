@@ -1,47 +1,63 @@
-let h2 = document.querySelector("#date");
-
-let now = new Date();
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+function formatDate(timestamp) {
+  let now = new Date();
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let day = now.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  day = days[now.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let day = now.getDay();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-day = days[now.getDay()];
 
-h2.innerHTML = `${day} ${hours}:${minutes}`;
+//let h2 = document.querySelector("#date");
+//h2.innerHTML = `${formateDate}`;
+
+function formattedDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sunday"];
+  return days[day];
+}
 
 function weatherForecasts(response) {
-  
   let forecastCall = document.querySelector("#weather-forecasts");
   //let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecast = response.data.daily; // stored the response forecast in this variable
-  
+
   let forecastContent = `<div class="row">`;
   //replaced the days variale with the forecastResponse variable
-  forecast.forEach(function (forecastDays) {
-    forecastContent =
-      forecastContent +
-      `<div class="col-2">
-            <div class="forecast-days">${forecastDays.dt}</div>
-              <img src="https://openweathermap.org/img/wn/${forecastDays.weather[0].icon}@2x.png" />
+  forecast.forEach(function (forecastDays, index) {
+    if (index < 6) {
+      forecastContent =
+        forecastContent +
+        `<div class="col-2">
+            <div class="forecast-days">${formattedDate(forecastDays.dt)}</div>
+              <img src="https://openweathermap.org/img/wn/${
+                forecastDays.weather[0].icon
+              }@2x.png" />
               <div class="forecast-temp">
-                <span class="forecast-temp-max">${forecastDays.temp.max}</span> 
-                <span class="forecast-temp-min">${forecastDays.temp.min}</span>
+                <span class="forecast-temp-max">${Math.round(
+                  forecastDays.temp.max
+                )}º</span> 
+                <span class="forecast-temp-min">${Math.round(
+                  forecastDays.temp.min
+                )}º</span>
             </div>
       </div>`;
+    }
   });
 
   forecastContent = forecastContent + `</div>`;
@@ -50,9 +66,9 @@ function weatherForecasts(response) {
 
 //created the forecast coordinate function. when this function is called it goes into the weatherForecats function and display
 function forecastCoordinates(coords) {
-  let apiKey = "ff69729f5d84be9471536bc122ea91ad";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(weatherForecasts);
+  let apiKey = "515c9ddbeb3cda9061acfab71031839e";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=meric`;
+  axios.get(url).then(weatherForecasts);
 }
 
 function weather(response) {
@@ -118,6 +134,5 @@ changeDegrees.addEventListener("click", changeDegree);*/
 
 let celsiusDegreeEvent = document.querySelector("#cels");
 celsiusDegreeEvent.addEventListener("click", celsiusDegree);
-
 
 //weatherForecasts();
