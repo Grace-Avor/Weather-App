@@ -40,11 +40,11 @@ function weatherForecasts(response) {
     if (index < 7) {
       forecastContent =
         forecastContent +
-        `<div class="col-2">
+        `<div class="col">
             <div class="forecast-days">${formattedDate(forecastDays.dt)}</div>
               <img src="https://openweathermap.org/img/wn/${
                 forecastDays.weather[0].icon
-              }@2x.png" class="img" />
+              }@2x.png" alt="https://openweathermap.org/img/wn/${forecastDays.weather[0].description}" class="img" />
               <div class="forecast-temp">
                 <span class="forecast-temp-max">${Math.round(
                   forecastDays.temp.max
@@ -77,7 +77,7 @@ function weather(response) {
   let humidity = document.querySelector("#humidity");
   let speed = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = formatDate(response.data.dt *100);
+  dateElement.innerHTML = formatDate(response.data.dt * 100);
 
   celsius = Math.round(response.data.main.temp);
 
@@ -128,8 +128,8 @@ let celsius = null;
 let button = document.querySelector("#search-form");
 button.addEventListener("click", searchButton);
 
-/*let changeDegrees = document.querySelector("#fahrenheit");
-changeDegrees.addEventListener("click", changeDegree);*/
+changeDegrees = document.querySelector("#fahrenheit");
+changeDegrees.addEventListener("click", changeDegree);
 
 let celsiusDegreeEvent = document.querySelector("#cels");
 celsiusDegreeEvent.addEventListener("click", celsiusDegree);

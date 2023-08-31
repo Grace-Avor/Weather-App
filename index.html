@@ -35,33 +35,42 @@
             id="but"
             type="submit"
             value="Search"
-            class="button bg-primary"
+            class="button"
           />
         </div>
       </div>
-
-      <h1 class="text-white" id="city"></h1>
-      <h6 id="date" class="text-white"></h6>
-      <h6 class="text-white describe" id="description"></h6>
+      <div class="float-end">
+        <h1 class="text-white" id="city"></h1>
+        <h6 id="date" class="text-white"></h6>
+        <h6 class="text-white describe" id="description"></h6>
+      </div>
       <div class="row">
-        <div class="col-6 xs-6">
+        <div class="col">
           <div class="clearfix image-div">
-            <img src="images/icon.png" id="icon" alt="image" class="float-left" />
+            <img
+              src="images/icon.png"
+              id="icon"
+              alt="image"
+              class="float-left"
+            />
 
             <strong class="units text-white">
               <span id="temp" class="degree"></span>
               <a href="" id="cels" class="active"> ºC</a>
-              <!--<a href="" id="fahrenheit">ºF</a>--></strong
+              <a href="" id="fahrenheit">ºF</a></strong
             >
           </div>
         </div>
-        <div class="col-6 xs-6">
-          <ul class="text-white">
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <ul class="text-white humidity-div">
             <li>Humidity: <span id="humidity"> </span></li>
             <li>Wind: <span id="wind"></span>km/h</li>
           </ul>
         </div>
       </div>
+
       <div class="card d-block">
         <div class="weather-forecast text" id="weather-forecasts"></div>
         <hr />
