@@ -22,13 +22,10 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-//let h2 = document.querySelector("#date");
-//h2.innerHTML = `${formateDate}`;
-
 function formattedDate(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sunday"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   return days[day];
 }
 
@@ -40,14 +37,14 @@ function weatherForecasts(response) {
   let forecastContent = `<div class="row">`;
   //replaced the days variale with the forecastResponse variable
   forecast.forEach(function (forecastDays, index) {
-    if (index < 6) {
+    if (index < 7) {
       forecastContent =
         forecastContent +
         `<div class="col-2">
             <div class="forecast-days">${formattedDate(forecastDays.dt)}</div>
               <img src="https://openweathermap.org/img/wn/${
                 forecastDays.weather[0].icon
-              }@2x.png" />
+              }@2x.png" class="img" />
               <div class="forecast-temp">
                 <span class="forecast-temp-max">${Math.round(
                   forecastDays.temp.max
@@ -79,6 +76,8 @@ function weather(response) {
   let icon = document.querySelector("#icon");
   let humidity = document.querySelector("#humidity");
   let speed = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.data.dt *100);
 
   celsius = Math.round(response.data.main.temp);
 
