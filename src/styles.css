@@ -24,6 +24,9 @@ p {
   top: -15px;
   margin-left: -5px;
 }
+.upper-half{
+  margin-top: 30px;
+}
 .header,
 .degree,
 .seven-days{
