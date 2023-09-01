@@ -22,6 +22,7 @@ p {
   position: relative;
   font-size: 10px;
   top: -15px;
+  margin-left: -5px;
 }
 .header,
 .degree,
@@ -89,7 +90,7 @@ ul {
 .submit-button {
   display: block;
   margin: 0 auto;
-  padding: 30px;
+  
 }
 
 .text {
