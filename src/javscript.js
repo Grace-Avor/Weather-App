@@ -138,7 +138,7 @@ function displayCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(display);
 }
 
-let currentLocation = document.querySelector(".btn-success");
+let currentLocation = document.querySelector(".current-btn");
 currentLocation.addEventListener("click", displayCurrentLocation);
 
 let celsius = null;

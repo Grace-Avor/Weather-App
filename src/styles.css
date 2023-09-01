@@ -1,17 +1,34 @@
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Merriweather', serif;
 }
 body{
   background-color: #f7f4ea;
+}
+
+.forecast-temp{
+  color: #000;
 }
 p {
   text-align: center;
   color: #6c757d;
 }
-.header,
-.degree{
-  color: #0000ff;
+
+.btn-success{
+  background-color: #4a0677;
+  opacity: 0.8;
+  transition: all 200ms ease-in-out;
 }
+.degree-abb{
+  position: relative;
+  font-size: 10px;
+  top: -15px;
+}
+.header,
+.degree,
+.seven-days{
+  color: #4a0677;
+}
+
 ul {
   list-style: none;
 }
@@ -19,6 +36,7 @@ ul {
 .img {
   width: 75%;
 }
+
 .weather-forecast {
   text-align: center;
   font-size: 12px;
@@ -30,14 +48,17 @@ ul {
   background-color: #1d314c;
   color: #fff;
 }
+
 .degree {
   font-size: 2rem;
-  margin-left: -15px;
+  margin-left: -20px;
 }
+
 .units .active {
   color: white;
   cursor: default;
 }
+
 .units .active:hover {
   text-decoration: none;
 }
@@ -49,6 +70,7 @@ ul {
 .describe::first-letter {
   text-transform: capitalize;
 }
+
 .weather-container {
   background-color: #00c2a6;
   border-radius: 5px;
@@ -61,6 +83,7 @@ ul {
   display: block;
   margin-bottom: 80px;
 }
+
 .form-outline,
 .current-location,
 .submit-button {
@@ -70,7 +93,7 @@ ul {
 }
 
 .text {
-  color: #0000ff;
+  color: #4a0677;
   font-weight: bold;
 }
 .source-code-url {

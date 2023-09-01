@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -29,11 +29,15 @@
                 id="search-input"
                 type="search"
                 class="form-control"
-                placeholder="Search City"
+                placeholder="City"
                 autocomplete="off"
               />
               <input id="but" type="submit" value="Search" class="button" />
-              <input type="button" value="Current" class="btn btn-success" />
+              <input
+                type="button"
+                value="Current"
+                class="btn btn-success current-btn"
+              />
             </div>
           </div>
           <div class="float-end">
@@ -53,8 +57,8 @@
 
                 <strong class="units text-white">
                   <span id="temp" class="degree"></span>
-                  <a href="" id="cels" class="active"> ºC |</a>
-                  <a href="" id="fahrenheit">ºF</a></strong
+                  <a href="" id="cels" class="active degree-abb"> ºC |</a>
+                  <a href="" id="fahrenheit" class="degree-abb">ºF</a></strong
                 >
               </div>
             </div>
@@ -66,10 +70,9 @@
                 <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
-            <h2>7-Days Forcast:</h2>
+            <h2 class="seven-days">7-Days Forcast:</h2>
           </div>
           <div class="weather-forecast text" id="weather-forecasts"></div>
-          <div class="weather-forecast text" id="hourly-forecasts"></div>
           <hr />
           <div class="more">
             <a
