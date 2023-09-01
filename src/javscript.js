@@ -29,41 +29,6 @@ function formattedDate(timestamp) {
   return days[day];
 }
 
-/*function formatHour(timestamp) {
-  let date = new Date(timestamp * 1000);
-  return date.getHours().toString().padStart(2, "0");
-}
-
-function formattedTime(response) {
-  let forecast = document.querySelector("#hourly-forecasts");
-  let forecastPerHour = response.data.hourly;
-  let forecastContent = `<div class="row">`;
-  forecastPerHour.forEach(function (forecastTime, index) {
-    if (index < 12) {
-      forecastContent =
-        forecastContent +
-        `<div class="col">
-            <div class="forecast-days">${formatHour(forecastTime.dt)}</div>
-              <img src="https://openweathermap.org/img/wn/${
-                forecastTime.weather[0].icon
-              }@2x.png" alt="https://openweathermap.org/img/wn/${
-          forecastTime.weather[0].description
-        }" class="img" />
-              <div class="forecast-temp">
-                <span class="forecast-temp-max">${Math.round(
-                  forecastTime.temp.max
-                )}º</span> 
-                <span class="forecast-temp-min">${Math.round(
-                  forecastTime.temp.min
-                )}º</span>
-            </div>
-      </div>`;
-    }
-  });
-  forecastContent = forecastContent + `</div>`;
-  forecast.innerHTML = forecastContent;
-}*/
-
 function weatherForecasts(response) {
   let forecastCall = document.querySelector("#weather-forecasts");
   //let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
