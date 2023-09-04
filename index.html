@@ -21,53 +21,51 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-container d-block">
-        <div class="main-container">
-          <div class="input-group">
-            <div id="search-form" class="form-outline d-flex">
-              <input
-                id="search-input"
-                type="search"
-                class="form-control"
-                placeholder="Enter City"
-                autocomplete="off"
-              />
-              <input id="but" type="submit" value="Search" class="button" />
-              <input
-                type="button"
-                value="Current"
-                class="btn btn-success current-btn"
-              />
-            </div>
+      <div class="card">
+        <div class="input-group">
+          <div id="search-form" class="form-outline d-flex">
+            <input
+              id="search-input"
+              type="search"
+              class="form-control outline-none"
+              placeholder="Enter City"
+              autocomplete="off"
+            />
+            <input id="but" type="submit" value="Search" class="button" />
+            <input
+              type="button"
+              value="Current"
+              class="btn current-btn button"
+            />
           </div>
-          <div class="upper-half">
-            <div class="float-end">
-              <h1 class="header" id="city"></h1>
-              <h6 id="date" class="text-white"></h6>
-              <h6 class="text-white describe" id="description"></h6>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="clearfix image-div">
-                  <img
-                    src="images/icon.png"
-                    id="icon"
-                    alt="image"
-                    class="float-left"
-                  />
+        </div>
+        <div class="upper-half">
+          <div class="float-end">
+            <h1 class="header" id="city"></h1>
+            <h6 id="date"></h6>
+            <h6 class="describe" id="description"></h6>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="clearfix image-div">
+                <img
+                  src="images/icon.png"
+                  id="icon"
+                  alt="image"
+                  class="float-left"
+                />
 
-                  <strong class="units text-white">
-                    <span id="temp" class="degree"></span>
-                    <a href="" id="cels" class="active degree-abb"> ºC |</a>
-                    <a href="" id="fahrenheit" class="degree-abb">ºF</a></strong
-                  >
-                </div>
+                <strong class="units text-white">
+                  <span id="temp" class="degree"></span>
+                  <a href="" id="cels" class="active degree-abb"> ºC |</a>
+                  <a href="" id="fahrenheit" class="degree-abb fahrenheit-degree">ºF</a></strong
+                >
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-6">
-              <ul class="text-white humidity-div">
+              <ul class="humidity-div">
                 <li>Humidity: <span id="humidity"> </span></li>
                 <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
