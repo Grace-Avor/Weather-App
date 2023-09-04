@@ -5,8 +5,9 @@
 body {
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418)),
-    url(https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg);
+    url(https://iphoneswallpapers.com/wp-content/uploads/2018/11/Beautiful-Weather-Beach-Nature-iPhone-Wallpaper.jpg);
   background-position: 50%;
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
