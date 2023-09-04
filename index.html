@@ -22,79 +22,89 @@
   <body>
     <div class="container">
       <div class="card">
-        <div class="input-group">
-          <div id="search-form" class="form-outline d-flex">
+        <div class="row search-div" id="search-form">
+          <div class="col-6">
             <input
               id="search-input"
               type="search"
-              class="form-control outline-none"
+              class="form-control"
               placeholder="Enter City"
               autocomplete="off"
             />
-            <input id="but" type="submit" value="Search" class="button" />
-            <input
+          </div>
+          <div class="col-3">
+            <button id="but" type="submit" value="Search" class="button">Search</button>
+          </div>
+          <div class="col-3">
+            <button
               type="button"
               value="Current"
-              class="btn current-btn button"
-            />
+              class="btn-dark current-btn button"
+            >
+              Current
+            </button>
           </div>
         </div>
-        <div class="upper-half">
-          <div class="float-end">
-            <h1 class="header" id="city"></h1>
-            <h6 id="date"></h6>
-            <h6 class="describe" id="description"></h6>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="clearfix image-div">
-                <img
-                  src="images/icon.png"
-                  id="icon"
-                  alt="image"
-                  class="float-left"
-                />
-
-                <strong class="units text-white">
-                  <span id="temp" class="degree"></span>
-                  <a href="" id="cels" class="active degree-abb"> ºC |</a>
-                  <a href="" id="fahrenheit" class="degree-abb fahrenheit-degree">ºF</a></strong
-                >
+        <div class="row">
+          <div class="col">
+            <div class="upper-half">
+              <div class="">
+                <h1 class="header" id="city"></h1>
+                <ul>
+                  <li id="date" class="date"></li>
+                  <li class="describe" id="description"></li>
+                </ul>
               </div>
             </div>
           </div>
           <div class="row">
+            <div class="col-6 second-col">
+              <div class="image-div">
+                <img src="images/icon.png" id="icon" alt="image" />
+
+                <strong class="units">
+                  <span id="temp" class="degree"></span>
+                  <a href="" id="cels" class="active degree-abb"> ºC |</a>
+                  <a
+                    href=""
+                    id="fahrenheit"
+                    class="degree-abb fahrenheit-degree"
+                    >ºF</a
+                  ></strong
+                >
+              </div>
+            </div>
             <div class="col-6">
               <ul class="humidity-div">
                 <li>Humidity: <span id="humidity"> </span></li>
                 <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
-            <h2 class="seven-days">7-Days Forcast:</h2>
           </div>
-          <div class="weather-forecast text" id="weather-forecasts"></div>
-          <hr />
-          <div class="more">
-            <a
-              href="https://github.com/Grace-Avor/Weather-App"
-              class="text source-code-url text-decoration-none"
+          <h2 class="seven-days">7-Days Forcast:</h2>
+        </div>
+        <div class="weather-forecast text" id="weather-forecasts"></div>
+        <hr />
+        <div class="more">
+          <a
+            href="https://github.com/Grace-Avor/Weather-App"
+            class="text source-code-url text-decoration-none"
+          >
+            Open Source Code
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-circle"
+              viewBox="0 0 16 16"
             >
-              Open Source Code
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-arrow-right-circle"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-                />
-              </svg>
-            </a>
-          </div>
+              <path
+                fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

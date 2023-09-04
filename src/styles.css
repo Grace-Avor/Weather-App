@@ -14,54 +14,55 @@ body {
   justify-content: center;
 }
 
-.card {
-  max-width: 500px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418));
-  opacity: 0.9;
-  border-radius: 5%;
-  margin: 0 auto;
-  padding: 10px;
-  opacity: 0.7;
-}
-
-.container{
-  margin-top: 60px;
-}
-
-.input-group{
-  margin-top: 30px;
-}
-.forecast-temp {
-  color: #000;
-}
 p {
   text-align: center;
   color: #6c757d;
 }
 
-.btn-success {
-  background-color: #4a0677;
-  opacity: 0.8;
-  transition: all 200ms ease-in-out;
+ul {
+  list-style: none;
 }
+
+.date,
+.describe {
+  margin-left: -30px;
+}
+
+.card {
+  max-width: 500px;
+  background: linear-gradient(rgb(217, 217, 219), rgb(217, 217, 219));
+  opacity: 0.9;
+  border-radius: 5%;
+  margin: 0 auto;
+  padding: 30px 10px;
+  opacity: 0.7;
+}
+
+.container {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.forecast-temp {
+  color: #000;
+}
+
 .degree-abb {
   position: relative;
   font-size: 10px;
   top: -15px;
   margin-left: -5px;
 }
+
 .upper-half {
   margin-top: 30px;
 }
+
 .header,
 .degree,
 .seven-days,
 .fahrenheit-degree {
   color: #4a0677;
-}
-
-ul {
-  list-style: none;
 }
 
 .img {
@@ -73,16 +74,13 @@ ul {
   font-size: 12px;
 }
 
-.button{
-  border: none;
-  border-radius: 5px;
-  background-color: #1d314c;
-  color: #fff;
+.image-div {
+  margin-left: -25px;
 }
 
 .degree {
   font-size: 2rem;
-  margin-left: -20px;
+  margin-left: -25px;
 }
 
 .units .active {
@@ -102,9 +100,20 @@ ul {
   text-transform: capitalize;
 }
 
-.humidity-div {
-  display: block;
-  margin-bottom: 80px;
+.second-col {
+  margin-bottom: 50px;
+}
+
+.button {
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  background-color: #4a0677;
+  color: #fff;
+}
+
+.search-div {
+  margin-top: 30px;
 }
 
 .form-outline,
@@ -118,6 +127,7 @@ ul {
   color: #4a0677;
   font-weight: bold;
 }
+
 .source-code-url {
   font-size: 12px;
   padding-left: 10px;
