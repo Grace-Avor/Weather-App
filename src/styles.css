@@ -106,7 +106,7 @@ ul {
 
 .button {
   border: none;
-  padding: 6px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #4a0677;
   font-size: 12px;
@@ -115,10 +115,6 @@ ul {
 
 .search-div {
   margin-top: 30px;
-}
-
-.form-control{
-  font-size: 10px;
 }
 
 .form-outline,
